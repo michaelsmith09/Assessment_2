@@ -32,7 +32,7 @@
 
 //CODE HERE
 const pizza = {
-    name: 'Pineapple and bacon',
+    name: 'Pineapple and bacon pizza',
     price: 12.99,
     category: 'Entree',
     popularity: 70,
@@ -100,7 +100,13 @@ console.log(newCategory)
 
 //CODE HERE
 const foodArr = {
-    
+    name: 'Fettuccine Alfredo with Chicken',
+    price: 14.99,
+    category: 'Entree',
+    popularity: 90,
+    rating: 4.7,
+    tags: ['alfredo sauce', 'fettuccine', 'chicken', 'pasta', 'glueten free']
+
 }
 
 
@@ -118,10 +124,12 @@ const foodArr = {
 
 //CODE HERE
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+// const filteredFood = foodArr.tags.filter(arr => arr.includes('fettu'))
 
+const filteredFood = foodArr.tags.filter(tag => tag.includes("fet"))
 
-
+// console.log(filteredFood)
+console.log(filteredFood)
 //////////////////PROBLEM 5////////////////////
 /* 
     Now let's write a function that's a little
@@ -162,7 +170,11 @@ const foodArr = {
 */
 
 //CODE HERE
-
+const filterByProperty = (rating, price, popularity) =>{
+    return foodArr.rating >= rating &&
+           foodArr.price <= price &&
+           foodArr.popularity >= popularity
+}
 
 /*
     Invoke the `filterByProperty` function passing
@@ -172,3 +184,4 @@ const foodArr = {
 */
 
 //CODE HERE
+console.log(filterByProperty(4, 20, 70))

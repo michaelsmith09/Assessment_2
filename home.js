@@ -22,9 +22,9 @@
 */
 
 //CODE HERE
+const greetUser = username => console.log(`Welcome back, ${username}`)
 
-
-
+greetUser('Joe')
 
 
 //////////////////PROBLEM 2////////////////////
@@ -51,6 +51,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
 
+const canWeDeliver = (zipCode) => {
+    if(deliveryAreaZipCodes.includes(zipCode)) {
+        return console.log('You are in our delivery zone!')
+    } else {
+        return console.log('Sorry, we can not deliver to that address.')
+    }
+}
+
+
+canWeDeliver(8520)
 
 
 /* 
@@ -71,8 +81,16 @@ const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 */
 
 // CODE HERE
-
-
+const canWeDeliverTwo = (zipCode) => {
+    for(let i = 0; deliveryAreaZipCodes.length; i++){
+        if(deliveryAreaZipCodes === zipCode){
+            return 'You are in our delivery zone!'
+        } else {
+            return 'Sorry, we can not deliver to that address.'
+        }
+    }
+}
+canWeDeliver(85206)
 //////////////////PROBLEM 3////////////////////
 /* 
     Below is an array of objects that have some
@@ -107,8 +125,11 @@ const deals = [
 */
 
 //CODE HERE
-
-
+const copyDeals = {title:'15% Off!', title: '10% Off!'}
+const spreadMethodDeals = {...deals[0], title: '10% Off!'}
+console.log(deals)
+console.log(copyDeals)
+console.log(spreadMethodDeals)
 
 /*
     The restaurant is going to continue its
@@ -124,3 +145,8 @@ const deals = [
 */
 
 //CODE HERE
+const copyDeals2 = {...deals[1]}
+// copyDeals2.desc.replace(/[March]/gi,'April')
+copyDeals2.desc = 'This deal lasts until the end of April!'
+
+console.log(copyDeals2)

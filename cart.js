@@ -87,7 +87,10 @@ console.log(calcFinalPrice())
 
 /*
     TEXT ANSWER HERE
-
+    I just went with the basic proberties on this guy
+    that I thought a place would want to know about
+    the guy. His name, age, Favorite food and what he
+    rates the food at your own establishment.
 */
 
 /*
@@ -96,3 +99,10 @@ console.log(calcFinalPrice())
 */
 
 //CODE HERE
+const customer = {
+    firstName: 'Jimmy',
+    lastName: 'John',
+    age: 34,
+    favFood: 'Sandwiches',
+    rateYourFood: 4.2,
+}
